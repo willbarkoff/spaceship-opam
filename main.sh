@@ -12,7 +12,7 @@
 SPACESHIP_OPAM_SHOW="${SPACESHIP_OPAM_SHOW=true}"
 SPACESHIP_OPAM_PREFIX="${SPACESHIP_OPAM_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"}"
 SPACESHIP_OPAM_SUFFIX="${SPACESHIP_OPAM_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
-SPACESHIP_OPAM_SYMBOL="${SPACESHIP_OPAM_SYMBOL="🐪 "}"
+SPACESHIP_OPAM_SYMBOL="${SPACESHIP_OPAM_SYMBOL="🐫 "}"
 SPACESHIP_OPAM_COLOR="${SPACESHIP_OPAM_COLOR="yellow"}"
 
 # ------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ SPACESHIP_OPAM_COLOR="${SPACESHIP_OPAM_COLOR="yellow"}"
 spaceship_opam() {
   [[ $SPACESHIP_OPAM_SHOW == false ]] && return
 
-  # If there are OCaml-specific files in current directory, or current directory is under the GOPATH
+  # If there are OCaml-specific files in current directory.
   [[ -f _opam || -n *.ml(#qN^/) || -n *.mli(#qN^/) ]] || return
 
   spaceship::exists opam || return
